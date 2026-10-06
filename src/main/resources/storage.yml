@@ -1,0 +1,4 @@
+# Storage settings require a full server restart. Database: wellmetin.db (SQLite WAL).
+persistent-metins: true
+queue-capacity: 4096
+reward-batch: 32

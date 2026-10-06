@@ -1,0 +1,64 @@
+command:
+  starting: '&eWellMetin is starting. Please try again shortly.'
+  unknown: '&cUnknown or disabled command. Use /wellmetin help.'
+  no-permission: '&cYou do not have permission to use this command.'
+  player-required: '&cThis command requires a player, or an explicit player UUID.'
+  location-required: '&cFrom console, specify a loaded location: <metin> <world> <x> <y> <z>.'
+  failed: '&cThe operation could not be completed. Check the server log.'
+help:
+  header: '&#8BD5FFWellMetin &7— commands available to you'
+  entry: '&b/wellmetin <command> &7— <description>'
+  help: 'Show this command list.'
+  reload: 'Validate and reload configuration.'
+  spawn: 'Create a Metin at your position or specified coordinates.'
+  remove: 'Remove a Metin without granting rewards.'
+  list: 'List active Metins, ten per page.'
+  info: 'Inspect an active Metin UUID.'
+  coin: 'Show your balance or another player’s balance.'
+  givecoin: 'Add Metin Coins to an online player or UUID.'
+  removecoin: 'Remove Metin Coins without going below zero.'
+  setcoin: 'Set a Metin Coin balance.'
+  debug: 'Show runtime counts and platform information.'
+usage:
+  help: '&eUsage: /wellmetin help'
+  reload: '&eUsage: /wellmetin reload'
+  spawn: '&eUsage: /wellmetin spawn <metin> [world x y z]'
+  remove: '&eUsage: /wellmetin remove <full-instance-uuid|nearest>'
+  list: '&eUsage: /wellmetin list [page]'
+  info: '&eUsage: /wellmetin info <full-instance-uuid>'
+  coin: '&eUsage: /wellmetin coin [online-player|uuid]'
+  givecoin: '&eUsage: /wellmetin givecoin <online-player|uuid> <whole-amount>'
+  removecoin: '&eUsage: /wellmetin removecoin <online-player|uuid> <whole-amount>'
+  setcoin: '&eUsage: /wellmetin setcoin <online-player|uuid> <whole-amount>'
+  debug: '&eUsage: /wellmetin debug'
+coin:
+  balance: '&e<player>&7 has &6<coin> Metin Coins&7.'
+  changed: '&aBalance updated: &e<player> &7now has &6<coin> Metin Coins&7.'
+  failed: '&cCoin operation failed. Check the amount, available balance, currency setting and server log.'
+spawn:
+  success: '&aSpawned <metin>&a. Instance: &f<id>'
+  failed: '&cCannot spawn there. Check the definition, loaded chunk, ground, world rules, provider and active limits.'
+remove:
+  success: '&aRemoved Metin <id> without rewards.'
+metin:
+  not-found: '&cNo matching active Metin was found.'
+list:
+  header: '&bActive: <count> &7| Suspended: <pending> | Page <page>'
+  entry: '&f<id> &7— <metin> &7[<world>] <health>/<max_health> HP'
+info:
+  detail: |-
+    &b<metin> &7(<id>)
+    &f<health>/<max_health> HP &7(<percent>%) | Locked: <locked>
+    &7<world> <x> <y> <z>
+debug:
+  status: '&bWellMetin &7| <platform> | Active <active> | Suspended <pending> | Definitions <definitions> | Loot <loot> | Waves <waves>'
+reload:
+  success: '&aReload complete. Existing encounters keep their captured definitions; new spawns use the new configuration.'
+  failed: '&cReload rejected. The previous configuration remains active. Check the server log.'
+log:
+  ready: 'WellMetin v<version> ready | <platform> | Minecraft <minecraft> | Metins: <metins> | Loot: <loot> | SQLite | Items: <integrations>'
+  startup-failed: 'WellMetin startup failed: <error>. Correct the reported configuration or storage problem and restart.'
+  operation-failed: 'WellMetin: <error>'
+  configuration-warning: 'Definition skipped: <error>'
+  integration-failed: 'Integration <plugin> disabled: <error>. Install a compatible public API version.'
+  integration-folia: 'Automatic <plugin> adapter disabled on Folia: its region safety is not verified. A region-safe integration may register an ItemProvider through the API.'

@@ -1,0 +1,22 @@
+id: destruction
+mode: WEIGHTED
+rolls: 2
+# Each roll selects one entry by weight. There is no percentage chance in this mode.
+entries:
+  - id: coins
+    kind: COIN
+    weight: 60
+    minimum: 30
+    maximum: 60
+  - id: diamonds
+    kind: ITEM
+    weight: 35
+    minimum: 1
+    maximum: 3
+    item: {provider: VANILLA, id: DIAMOND}
+  - id: ancient_scrap
+    kind: ITEM
+    weight: 5
+    minimum: 1
+    maximum: 1
+    item: {provider: VANILLA, id: NETHERITE_SCRAP}

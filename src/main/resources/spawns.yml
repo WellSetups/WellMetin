@@ -1,0 +1,17 @@
+# Only loaded chunks are considered. No world generation or forced chunk loading.
+spawns: []
+# Example (adjust to your world; players must be within maximum-player-distance):
+#  - id: ancient_clearing
+#    metin: ancient_metin
+#    mode: STATIC
+#    world: world
+#    x: 100.5
+#    y: 65
+#    z: 100.5
+#    yaw: 0
+#    minimum-y: -64
+#    maximum-y: 320
+#    minimum-player-distance: 0
+#    maximum-player-distance: 128
+#    attempts: 1
+# RANDOM_REGION also accepts radius: 64 and finds the surface inside the Y range.

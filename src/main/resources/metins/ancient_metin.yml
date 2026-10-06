@@ -1,0 +1,85 @@
+id: ancient_metin
+name: '&#B68CFFAncient Metin'
+description: ['A crystal watched over by ancient guardians.']
+level: 45
+health: 10000
+permission: wellmetin.use
+visual:
+  provider: VANILLA
+  id: AMETHYST_BLOCK
+  custom-model-data: 0
+  scale: 2.0
+  offset-y: 0.85
+hitbox:
+  type: IRON_GOLEM
+  # Used only with SLIME (non-peaceful worlds) or COW, respectively.
+  slime-size: 3
+  baby: false
+combat:
+  multiplier: 1.0
+  weapons: [WOODEN_SWORD, STONE_SWORD, GOLDEN_SWORD, IRON_SWORD, DIAMOND_SWORD, NETHERITE_SWORD]
+  custom-weapons: []
+  minimum-enchantment-level: 0
+  # Extra server-side per-target debounce, in addition to native calculated attack damage.
+  minimum-attack-interval-ticks: 10
+display:
+  enabled: true
+  update-ticks: 5
+  offset-y: 2.6
+  bar-segments: 10
+  filled: '&a█'
+  empty: '&7░'
+  lines:
+    - '<metin> &7Lv. <level>'
+    - '<bar> &f<percent>%'
+    - '&f<health> &7/ &f<max_health> HP'
+worlds:
+  whitelist: []
+  blacklist: []
+biomes: []
+spawn:
+  modes: [COMMAND_ONLY, STATIC, RANDOM_REGION]
+  respawn-seconds: 300
+  maximum-active: 50
+  safe-ground: true
+  allow-liquids: false
+reward-mode: CONTRIBUTION
+minimum-contribution-percent: 10
+reward-checkpoints:
+  - {id: hp80, at-health-percent: 80, table: common_checkpoint}
+  - {id: hp60, at-health-percent: 60, table: common_checkpoint}
+  - {id: hp40, at-health-percent: 40, table: common_checkpoint}
+  - {id: hp20, at-health-percent: 20, table: common_checkpoint}
+  - {id: hp0, at-health-percent: 0, table: destruction}
+# Leave empty when the 0% checkpoint already grants the destruction table.
+destruction-table: ''
+phases:
+  guardians_75:
+    trigger-health-percent: 75
+    trigger-once: true
+    actions:
+      - {type: WAVE, value: guardians, lock-metin-until-wave-dead: true}
+      - {type: SOUND, value: minecraft:block.amethyst_block.resonate, amount: 1}
+  elite_50:
+    trigger-health-percent: 50
+    trigger-once: true
+    actions:
+      - {type: WAVE, value: elite_guardians, lock-metin-until-wave-dead: true}
+  stronger_25:
+    trigger-health-percent: 25
+    trigger-once: true
+    actions:
+      - {type: WAVE, value: elite_guardians, lock-metin-until-wave-dead: true}
+      - {type: PARTICLE, value: END_ROD, amount: 35}
+  final_10:
+    trigger-health-percent: 10
+    trigger-once: true
+    actions:
+      - {type: WAVE, value: final_defense, lock-metin-until-wave-dead: true}
+      - {type: NEARBY_MESSAGE, value: '&5The Ancient Metin calls its final defenders!', radius: 32}
+on-spawn: []
+on-destroy:
+  - {type: SOUND, value: minecraft:block.amethyst_block.break, amount: 1}
+  - {type: PARTICLE, value: END_ROD, amount: 60}
+tags:
+  tier: ancient

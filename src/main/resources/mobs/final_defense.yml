@@ -1,0 +1,21 @@
+id: final_defense
+timeout-seconds: 300
+mobs:
+  - type: HUSK
+    amount: 2
+    minimum-radius: 2
+    maximum-radius: 4
+    name: '&cAncient Sentinel'
+    health-multiplier: 4.0
+    damage-multiplier: 1.5
+    glowing: true
+    ai: true
+    vanilla-drops: false
+    chance: 100
+    level: 45
+    loot: ''
+    equipment:
+      HAND: {provider: VANILLA, id: DIAMOND_SWORD}
+      CHEST: {provider: VANILLA, id: IRON_CHESTPLATE}
+    effects:
+      - {type: SPEED, ticks: 6000, amplifier: 0}

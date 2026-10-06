@@ -1,0 +1,18 @@
+id: guardians
+timeout-seconds: 180
+mobs:
+  - type: ZOMBIE
+    amount: 3
+    minimum-radius: 2
+    maximum-radius: 5
+    name: '&7Ancient Guardian'
+    health-multiplier: 1.0
+    damage-multiplier: 1.0
+    glowing: false
+    ai: true
+    vanilla-drops: false
+    chance: 100
+    level: 20
+    loot: ''
+    equipment:
+      HEAD: {provider: VANILLA, id: IRON_HELMET}

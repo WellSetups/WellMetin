@@ -1,0 +1,56 @@
+name: WellMetin
+version: 1.0.0
+main: com.wellsetups.wellmetin.WellMetinPlugin
+api-version: '1.20'
+author: WellSetups
+description: Configurable MMORPG Metin encounters, guardian waves and contribution rewards.
+folia-supported: true
+softdepend: [ItemsAdder, Nexo, Oraxen]
+commands:
+  wellmetin:
+    description: WellMetin commands
+    aliases: [wm, metin]
+permissions:
+  wellmetin.*:
+    default: op
+    children:
+      wellmetin.admin: true
+      wellmetin.use: true
+  wellmetin.admin:
+    default: op
+    children:
+      wellmetin.command.help: true
+      wellmetin.command.reload: true
+      wellmetin.command.spawn: true
+      wellmetin.command.remove: true
+      wellmetin.command.list: true
+      wellmetin.command.info: true
+      wellmetin.command.coin: true
+      wellmetin.command.givecoin: true
+      wellmetin.command.removecoin: true
+      wellmetin.command.setcoin: true
+      wellmetin.command.debug: true
+  wellmetin.use:
+    default: true
+  wellmetin.command.help:
+    default: true
+  wellmetin.command.coin:
+    default: true
+  wellmetin.command.reload:
+    default: op
+  wellmetin.command.spawn:
+    default: op
+  wellmetin.command.remove:
+    default: op
+  wellmetin.command.list:
+    default: op
+  wellmetin.command.info:
+    default: op
+  wellmetin.command.givecoin:
+    default: op
+  wellmetin.command.removecoin:
+    default: op
+  wellmetin.command.setcoin:
+    default: op
+  wellmetin.command.debug:
+    default: op

@@ -1,0 +1,7 @@
+language: en_US
+damage-multiplier: 1.0
+maximum-active: 500
+maintenance-ticks: 40
+currency:
+  enabled: true
+debug: false

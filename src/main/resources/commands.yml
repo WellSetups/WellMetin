@@ -1,0 +1,60 @@
+# Root names are declared in plugin.yml: /wellmetin, /wm, /metin.
+# Subcommand names, aliases, permissions, help keys and enabled flags reload safely.
+commands:
+  help:
+    name: help
+    aliases: [h]
+    permission: wellmetin.command.help
+    enabled: true
+    description-key: help.help
+    usage-key: usage.help
+  reload:
+    name: reload
+    aliases: []
+    permission: wellmetin.command.reload
+    enabled: true
+  spawn:
+    name: spawn
+    aliases: [create, summon]
+    permission: wellmetin.command.spawn
+    enabled: true
+  remove:
+    name: remove
+    aliases: [delete]
+    permission: wellmetin.command.remove
+    enabled: true
+  list:
+    name: list
+    aliases: []
+    permission: wellmetin.command.list
+    enabled: true
+  info:
+    name: info
+    aliases: [inspect]
+    permission: wellmetin.command.info
+    enabled: true
+  coin:
+    name: coin
+    aliases: [coins, balance]
+    permission: wellmetin.command.coin
+    enabled: true
+  givecoin:
+    name: givecoin
+    aliases: []
+    permission: wellmetin.command.givecoin
+    enabled: true
+  removecoin:
+    name: removecoin
+    aliases: []
+    permission: wellmetin.command.removecoin
+    enabled: true
+  setcoin:
+    name: setcoin
+    aliases: []
+    permission: wellmetin.command.setcoin
+    enabled: true
+  debug:
+    name: debug
+    aliases: [status]
+    permission: wellmetin.command.debug
+    enabled: true

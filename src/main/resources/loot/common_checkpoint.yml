@@ -1,0 +1,14 @@
+id: common_checkpoint
+mode: INDEPENDENT
+entries:
+  - id: coins
+    kind: COIN
+    chance: 100
+    minimum: 5
+    maximum: 12
+  - id: shards
+    kind: ITEM
+    chance: 65
+    minimum: 1
+    maximum: 3
+    item: {provider: VANILLA, id: AMETHYST_SHARD}

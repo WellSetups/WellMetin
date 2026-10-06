@@ -1,0 +1,18 @@
+id: elite_guardians
+timeout-seconds: 240
+mobs:
+  - type: HUSK
+    amount: 4
+    minimum-radius: 3
+    maximum-radius: 6
+    name: '&6Elite Guardian'
+    health-multiplier: 2.0
+    damage-multiplier: 1.25
+    glowing: true
+    ai: true
+    vanilla-drops: false
+    chance: 100
+    level: 35
+    loot: ''
+    equipment:
+      HAND: {provider: VANILLA, id: IRON_SWORD}
